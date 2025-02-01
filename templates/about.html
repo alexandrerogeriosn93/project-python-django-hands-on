@@ -8,5 +8,11 @@
   <body>
     <h2>About</h2>
     <p>Acesse a página <a href="/">Home</a></p>
+    <h3>Certificações</h3>
+    <ul>
+      {% for certification in certifications %}
+      <li>{{certification}}</li>
+      {% endfor %}
+    </ul>
   </body>
 </html>

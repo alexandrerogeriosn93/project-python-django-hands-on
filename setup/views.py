@@ -2,8 +2,11 @@ from django.shortcuts import render
 
 
 def homepage(request):
-    return render(request, "home.html")
+    name = "Alexandre"
+    person = {"name": "Alexandre Rogério", "age": 31, "city": "Uberlândia"}
+    return render(request, "home.html", {"name": name, "person": person})
 
 
 def about(request):
-    return render(request, "about.html")
+    certifications = ["React", "Django", "Docker", "Python", "Spring"]
+    return render(request, "about.html", {"certifications": certifications})
